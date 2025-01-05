@@ -1,38 +1,30 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";  // Updated to useNavigate
 
 const Input = () => {
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [showNextButton, setShowNextButton] = useState(false); // To toggle the "Go to Next" button
-  const [formData, setFormData] = useState(null); // To store form data and pass to Output
 
-  const navigate = useNavigate(); // Use useNavigate for navigation
-
+  const submit = () => {
+    alert(`Form submitted! succesfully `);
+  }
+  
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (password !== confirmPassword) {
       alert("Passwords do not match");
       return;
     }
-    // Store form data
-    setFormData({ firstName, lastName, email, password });
-    // Clear input fields
+
     setFirstName("");
     setLastName("");
     setEmail("");
     setPassword("");
     setConfirmPassword("");
-    setShowNextButton(true); // Show "Go to Next" button
-    alert(`Form submitted! \nName: ${firstName} ${lastName} \nEmail: ${email}`);
-  };
-
-  const goToNext = () => {
-    // Navigate to Output component
-    navigate("/output", { state: { formData } }); // Pass formData as state
   };
 
   return (
@@ -84,12 +76,8 @@ const Input = () => {
             required
           />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" onClick={submit}>Submit</button>
       </form>
-
-      {showNextButton && (
-        <button onClick={goToNext}>Go to Next</button> // Show this button after submission
-      )}
     </div>
   );
 };
