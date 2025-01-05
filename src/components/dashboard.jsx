@@ -1,13 +1,18 @@
 // import Count from './count';
-import Input from './input';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Output from "./Output";
+import Input from "./input";
 
 const Dashboard = () => {
-return (
-    <div>
-        <Input/>
-        {/* <Count/> */}
-    </div>
-)
-}
-
+ 
+    return (
+    <Router>
+        <Routes>  {/* Use Routes for React Router v6 */}
+        <Route path="/" element={<Input />} />
+        <Route path="/output" element={<Output />} />
+        </Routes>
+    </Router>
+    );
+    }
+    
 export default Dashboard;
