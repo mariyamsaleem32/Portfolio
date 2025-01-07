@@ -1,12 +1,14 @@
-import Count from './count';
-import Input from "./input";
+// import Count from './count';
+// import Input from "./input";
+import Time from "./time";
 
 const Dashboard = () => {
  
     return (
         <div>
-        <Input/>
-        <Count />
+        {/* <Input/> */}
+        {/* <Count /> */}
+        <Time/>
         </div>
     );
     }
