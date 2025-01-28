@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Layout, Menu, Button, Switch, Card, Typography } from "antd";
 import { GithubOutlined, LinkedinOutlined, DownloadOutlined } from "@ant-design/icons";
 import { Container, Row, Col } from 'react-bootstrap';  
-import './App.css';
+import '../App.css';
 
 const { Header, Content, Footer } = Layout;
 const { Title, Paragraph } = Typography;
@@ -16,6 +16,7 @@ const Dashboard = () => {
   };
 
   return (
+    <>
     <Layout className={isDarkMode ? "dark-mode" : ""}>
       {/* Header Section */}
       <Header>
@@ -90,7 +91,7 @@ const Dashboard = () => {
         Created by Mariyam Saleem
       </Footer>
     </Layout>
-  );
+    </> );
 };
 
 export default Dashboard;
