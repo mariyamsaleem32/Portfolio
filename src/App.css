@@ -1,27 +1,61 @@
-/* Default light theme */
+/* General Styling */
 body {
-    background-color: #f0f2f5;
-    color: #000;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+/* Navbar Styling */
+header {
+  padding: 20px;
+  background: #1890ff;
+}
+
+header .header-content {
+  padding: 0 10px;
+}
+
+header .header-content .ant-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.check {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.skills-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.placeholder {
+  height: 10px;
+  background-color: #1890ff;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  header .header-content .ant-row {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .dark-mode {
-    background-color: #1a1a1a;
-    color: #fff;
+
+  header .header-content .ant-col {
+    text-align: center;
   }
-  
-  /* Additional custom styling */
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
+
+  .skills-container {
+    padding: 10px;
   }
-  
-  .card {
-    background: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  }
-  
-  .card:hover {
-    background: #e6f7ff;
-  }
-  
+}

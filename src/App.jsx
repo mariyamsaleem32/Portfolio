@@ -1,9 +1,9 @@
-import Dashboard from './components/dashboard';
+import Routing from './config/routes'
 
-function App() {
+const App = () =>{
   return (
     <>
-     <Dashboard/>
+    <Routing/>
     </>
   );
 }
