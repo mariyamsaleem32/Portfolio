@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Layout, Button, Switch, Row, Col, Typography, Card } from "antd";
 import { GithubOutlined, LinkedinOutlined, DownloadOutlined, MailOutlined } from "@ant-design/icons";
 import image from '../assets/myImage.jpg'; 
+import CV from '../assets/myCV.pdf'
 
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
@@ -12,7 +13,6 @@ const Dashboard = () => {
     setIsDarkMode(checked);
   };
 
-  // Common style for links
   const linkStyle = {
     color: 'white',
     textDecoration: 'none',
@@ -66,7 +66,7 @@ const Dashboard = () => {
       {/* Resume Section */}
       <section id="resume" style={{ textAlign: "center", padding: "20px" }}>
         <Button type="primary" icon={<MailOutlined />} href="mailto:mariyamsaleem87@gmail.com">Contact Me</Button>
-        <Button type="default" icon={<DownloadOutlined />} href="/resume.pdf" download="Mariyam_Saleem_Resume" style={{ marginLeft: "10px" }}>Download Resume</Button>
+        <Button type="default" icon={<DownloadOutlined />} href={CV} download="Mariyam_Saleem_CV" style={{ marginLeft: "10px" }}>Download CV</Button>
       </section>
 
       {/* Open Source Projects Section */}
