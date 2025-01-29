@@ -1,9 +1,10 @@
-import Routing from './config/routes'
+import AppLayout from './components/layout';
+import Dashboard from './components/dashboard';
 
 const App = () =>{
   return (
     <>
-    <Routing/>
+   <AppLayout><Dashboard/></AppLayout>
     </>
   );
 }

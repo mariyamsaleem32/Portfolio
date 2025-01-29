@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import {  Layout, theme } from 'antd';
 import '../App.css';
-const { Header, Content } = Layout;
+const {Content } = Layout;
 
 
 const AppLayout = ({children}) => {
@@ -13,32 +12,6 @@ const AppLayout = ({children}) => {
     <Layout style={{
         height: '100vh'
     }}>
-     <Header
-        style={{
-          position: 'sticky',
-          top: 0,
-          zIndex: 1,
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-      >
-          {/* <Menu
-          theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={['2']}
-         /> */}
-         <div>
-            <Link to={'/'}  style={{
-            color:'white',
-           textDecoration:'none',
-           fontSize:'32px',
-           fontStyle:'italic',
-           fontWeight:'400px'
-           }}>Home</Link>
-         </div>
-      </Header>
       <Content
         style={{
           padding: '0 48px',

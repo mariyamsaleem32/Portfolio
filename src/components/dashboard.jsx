@@ -1,11 +1,10 @@
 import React, {useState} from "react";
 import { Layout, Button, Switch, Row, Col, Typography, Card } from "antd";
 import { GithubOutlined, LinkedinOutlined, DownloadOutlined, MailOutlined } from "@ant-design/icons";
-// import { Link } from "react-router-dom";
-
+import {Routes, Route, Link  } from 'react-router-dom';
 import image from '../assets/myImage.jpg'; 
 
-const { Content,Footer  } = Layout;
+const { Header,Content,Footer} = Layout;
 const { Title, Paragraph } = Typography;
   
 const Dashboard = () => {
@@ -15,17 +14,47 @@ const Dashboard = () => {
   };
 
   return (
+    <>
     <Layout className={isDarkMode ? "dark-mode" : ""}>
-      {/* Header Section */}
-     
       {/* Background Switch */}
       <div className="check">
         <Switch checked={isDarkMode} onChange={toggleMode} />
         <span style={{ marginLeft: "10px" }}>Dark Mode</span>
       </div>
 
+      <Header
+        theme="dark"
+        mode="horizontal"
+        style={{
+          position: 'sticky',
+          top: 0,
+          zIndex: 1,
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+            <Link to={'home'}  style={{
+            color:'white',
+           textDecoration:'none',
+           fontSize:'32px',
+           fontStyle:'italic',
+           fontWeight:'400px',
+           margin:'15px'
+           }}>Home</Link>
+        <Link to={'about'}  style={{
+            color:'white',
+           textDecoration:'none',
+           fontSize:'32px',
+           fontStyle:'italic',
+           margin:'15px',
+           fontWeight:'400px'
+           }}>About</Link>
+      </Header>
+
       {/* About Section */}
-      <Content style={{ padding: "50px 0" }}>
+      <Content style={{ padding: "50px 0" }} path='about'>
         <div className="about">
           <section id="about">
           <Title level={3} style={{ color: "white" }}>Mariyam Saleem</Title>
@@ -112,6 +141,11 @@ const Dashboard = () => {
         Created by Mariyam Saleem
     </Footer>
     </Layout>
+
+     <Routes>
+     <Route path="/" element={<Dashboard/>} />
+   </Routes>
+   </>
   );
 };
 
