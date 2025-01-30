@@ -56,6 +56,45 @@ header .header-content .ant-row {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
+  .header{
+  position:sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start;
+  background-color: #1d242b;
+
+}
+  header .header-content .ant-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header .header-content .ant-col {
+    text-align: center;
+  }
+
+  .skills-container {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 698px) {
+  .header{
+  position:sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start;
+  background-color: #0080ff;
+
+}
   header .header-content .ant-row {
     flex-direction: column;
     text-align: center;

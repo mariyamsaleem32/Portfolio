@@ -1,10 +1,9 @@
-import AppLayout from './components/layout';
-import Dashboard from './components/dashboard';
+import Index from './components/index';
 
 const App = () =>{
   return (
     <>
-   <AppLayout><Dashboard/></AppLayout>
+    <Index/>
     </>
   );
 }
