@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AppLayout from './layout';
-import navApp from './navLayout';
+import NavApp from './navLayout';
 import Dashboard from './dashboard';
 
 const Index = () => {
@@ -24,7 +24,7 @@ const Index = () => {
 
   return (
     <AppLayout>
-      {isResponsive ? <navApp/> : <Dashboard/>}
+      {isResponsive ? <NavApp/> : <Dashboard/>}
     </AppLayout>
   );
 };

@@ -9,7 +9,7 @@ import {
 import { Button, Layout, Menu, theme } from 'antd';
 const { Header, Sider, Content } = Layout;
 
-const navApp = ({children}) => {
+const NavApp = ({children}) => {
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer, borderRadiusLG },
@@ -79,4 +79,4 @@ const navApp = ({children}) => {
     </Layout>
   );
 };
-export default navApp;
+export default NavApp;
