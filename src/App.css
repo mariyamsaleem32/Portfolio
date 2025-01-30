@@ -12,6 +12,16 @@ body {
 }
 
 /* Navbar Styling */
+.header{
+  position:sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 header {
   padding: 20px;
   background: #1890ff;

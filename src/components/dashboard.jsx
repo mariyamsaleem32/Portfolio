@@ -24,18 +24,9 @@ const Dashboard = () => {
 
   return (
     <Layout className={isDarkMode ? "dark-mode" : ""}>
-      <Header
+      <Header className='header'
         theme="dark"
         mode="horizontal"
-        style={{
-          position: 'sticky',
-          top: 0,
-          zIndex: 1,
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
       >
         <a href="#about" style={linkStyle}>About</a>
         <a href="#resume" style={linkStyle}>Project</a>
