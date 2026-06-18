@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Layout, Button, Switch, Row, Col, Typography, Card } from "antd";
 import { GithubOutlined, LinkedinOutlined, DownloadOutlined, MailOutlined } from "@ant-design/icons";
 import image from '../assets/myImage.jpg'; 
-import CV from '../assets/myCV.pdf'
+import CV from '../assets/Resume.pdf';
 
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
@@ -46,7 +46,7 @@ const Dashboard = () => {
           <Title level={3} style={{color: isDarkMode ? "white" : "black" }}>Mariyam Saleem</Title>
           <p style={{color: isDarkMode ? "white" : "black" }}>Front-End Developer</p>
             <h1 style={{color: isDarkMode ? "white" : "black" }}>Hi all, I'm Mariyam Saleem <span role="img" aria-label="wave">👋</span></h1>
-            <p style={{color: isDarkMode ? "white" : "black" }}>A front-end developer 🚀 with experience in building Web and Mobile applications using HTML, CSS, JavaScript, React, and Bootstrap.</p>
+            <p style={{color: isDarkMode ? "white" : "black" }}>A front-end developer 🚀 with experience in building Web and Mobile applications using HTML, CSS, JavaScript, React, and Bootstrap. also basic knowledge of backend Express.JS and MongoDB</p>
           </section>
           <div className="image">
             <img src={image} alt="Mariyam Saleem" style={{ borderRadius: '50%', width: '150px', height: '150px' }} />
@@ -57,7 +57,7 @@ const Dashboard = () => {
       {/* Resume Section */}
       <section id="resume" style={{ textAlign: "center", padding: "20px" }}>
         <Button type="primary" icon={<MailOutlined />} href="mailto:mariyamsaleem87@gmail.com">Contact Me</Button>
-        <Button type="default" icon={<DownloadOutlined />} href={CV} download="Mariyam_Saleem_CV" style={{ marginLeft: "10px" }}>Download CV</Button>
+        <Button type="default" icon={<DownloadOutlined />} href={CV} download="Mariyam_Saleem_Resume" style={{ marginLeft: "10px" }}>Download my Resume</Button>
       </section>
 
       {/* Open Source Projects Section */}
@@ -125,16 +125,33 @@ const Dashboard = () => {
       <Content style={{ padding: "20px", backgroundColor: "#f9f9f9" }}>
         <div className="skills-container">
           <Title level={2}>Proficiency</Title>
-          <Row>
-            {["HTML", "CSS", "JavaScript", 'Firebase', 'React', "Bootstrap",'Ant Design'].map((skill) => (
-              <Col span={6} key={skill} style={{ marginBottom: "20px" }}>
-                <Card>
-                  <Card.Meta title={skill} />
-                  <div className="placeholder" style={{ width: "75%", height: "10px", backgroundColor: "#4CAF50" }}></div>
-                </Card>
-              </Col>
-            ))}
-          </Row>
+          <Row> 
+                {[
+                  "HTML", 
+                  "CSS", 
+                  "JavaScript", 
+                  "Firebase", 
+                  "React", 
+                  "Bootstrap", 
+                  "Ant Design",
+                  "Express JS",
+                  "MongoDB"
+                ].map((skill) => (
+                  <Col span={6} key={skill} style={{ marginBottom: "20px" }}>
+                    <Card>
+                      <Card.Meta title={skill} />
+                      <div 
+                        className="placeholder" 
+                        style={{ 
+                          width: skill === "Express JS" || skill === "MongoDB" ? "40%" : "75%", 
+                          height: "10px", 
+                          backgroundColor: "#4CAF50" 
+                        }}
+                      ></div>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
         </div>
       </Content>
 
