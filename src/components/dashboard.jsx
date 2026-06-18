@@ -43,9 +43,9 @@ const Dashboard = () => {
       <Content style={{ padding: "50px 0" }} >
         <div className="about">
           <section id="about">
-          <Title level={3} style={{color: isDarkMode ? "white" : "black" }}>Mariyam Saleem</Title>
+          <Title level={3} style={{color: isDarkMode ? "white" : "black" }}>Maryam Saleem</Title>
           <p style={{color: isDarkMode ? "white" : "black" }}>Front-End Developer</p>
-            <h1 style={{color: isDarkMode ? "white" : "black" }}>Hi all, I'm Mariyam Saleem <span role="img" aria-label="wave">👋</span></h1>
+            <h1 style={{color: isDarkMode ? "white" : "black" }}>Hi all, I'm Maryam Saleem <span role="img" aria-label="wave">👋</span></h1>
             <p style={{color: isDarkMode ? "white" : "black" }}>A front-end developer 🚀 with experience in building Web and Mobile applications using HTML, CSS, JavaScript, React, and Bootstrap. also basic knowledge of backend Express.JS and MongoDB</p>
           </section>
           <div className="image">
@@ -167,7 +167,7 @@ const Dashboard = () => {
       </Content>
       <Footer
       style={{ textAlign: "center",color: isDarkMode ? "white" : "black", backgroundColor: isDarkMode ? "#011" : "white" }}>
-        Created by Mariyam Saleem
+        Created by Maryam Saleem
     </Footer>
     </Layout>
   );
